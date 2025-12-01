@@ -1,0 +1,2 @@
+# Schlieren_photography
+シュリーレン法を用いた撮影装置
