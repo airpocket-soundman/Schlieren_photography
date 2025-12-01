@@ -8,7 +8,7 @@
 
 ## プロジェクト構成
 
-このリポジトリには3つの独立したプロジェクトが含まれています：
+このリポジトリには4つの独立したプロジェクトが含まれています：
 
 ```
 Schlieren_photography/
@@ -19,6 +19,11 @@ Schlieren_photography/
 │   │   └── main.cpp
 │   └── README.md
 ├── display_test/                # ディスプレイテストプロジェクト
+│   ├── platformio.ini
+│   ├── src/
+│   │   └── main.cpp
+│   └── README.md
+├── display_streaming/           # カメラ映像ストリーミング表示プロジェクト
 │   ├── platformio.ini
 │   ├── src/
 │   │   └── main.cpp
@@ -54,7 +59,19 @@ ILI9341ドライバを使用したSPI制御TFT液晶のテストプロジェク�
 
 詳細は [display_test/README.md](display_test/README.md) を参照してください。
 
-### 3. schlieren_camera（準備中）
+### 3. display_streaming
+
+カメラ映像をリアルタイムでTFT液晶に表示するストリーミングプロジェクト。
+
+**主な機能:**
+- QVGA解像度でのカメラストリーミング
+- リアルタイム映像表示（10-15 FPS）
+- RGB565形式での高速画像転送
+- カメラとディスプレイの統合動作
+
+詳細は [display_streaming/README.md](display_streaming/README.md) を参照してください。
+
+### 4. schlieren_camera（準備中）
 
 カメラとディスプレイを統合したシュリーレン撮影システムの完全版。
 
@@ -146,11 +163,17 @@ ILI9341ドライバを使用したSPI制御TFT液晶のテストプロジェク�
   - [x] ILI9341ドライバでの表示動作確認
   - [ ] タッチパネル入力機能
   - [ ] 高度なGUI機能
+- [x] display_streaming: カメラ映像のリアルタイム表示
+  - [x] カメラストリーミング機能の実装
+  - [x] ディスプレイへのリアルタイム描画
+  - [x] RGB565形式での画像転送
+  - [ ] フレームレート最適化
+  - [ ] 画像フィルタリング機能
 - [ ] schlieren_camera: 統合システムの実装
-  - [ ] リアルタイム画像表示
   - [ ] タッチUIの実装
   - [ ] 画像処理・エッジ検出
   - [ ] LED光源の輝度制御
+  - [ ] 静止画キャプチャ機能
   - [ ] 最適化と性能向上
 
 ## 使用方法
@@ -159,6 +182,7 @@ ILI9341ドライバを使用したSPI制御TFT液晶のテストプロジェク�
 
 - [camera_test/README.md](camera_test/README.md) - カメラテストの使用方法
 - [display_test/README.md](display_test/README.md) - ディスプレイテストの使用方法
+- [display_streaming/README.md](display_streaming/README.md) - カメラ映像ストリーミング表示の使用方法
 - schlieren_camera/README.md - シュリーレンカメラの使用方法（準備中）
 
 ## ハードウェア接続
@@ -209,4 +233,4 @@ TBD
 ---
 
 **更新日**: 2025/12/01  
-**プロジェクト状況**: camera_test 完成 / display_test 基本実装完了 / schlieren_camera 準備中
+**プロジェクト状況**: camera_test 完成 / display_test 基本実装完了 / display_streaming 基本実装完了 / schlieren_camera 準備中
