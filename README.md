@@ -18,7 +18,7 @@ Schlieren_photography/
 │   ├── src/
 │   │   └── main.cpp
 │   └── README.md
-├── display_test/                # ディスプレイテストプロジェクト（準備中）
+├── display_test/                # ディスプレイテストプロジェクト
 │   ├── platformio.ini
 │   ├── src/
 │   │   └── main.cpp
