@@ -42,15 +42,17 @@ SPRESENSE + HDRカメラボードを使用したJPEG画像撮影のテストプ�
 
 詳細は [camera_test/README.md](camera_test/README.md) を参照してください。
 
-### 2. display_test（準備中）
+### 2. display_test
 
 ILI9341ドライバを使用したSPI制御TFT液晶のテストプロジェクト。
 
-**予定機能:**
+**主な機能:**
 - TFT液晶の初期化と表示制御
-- タッチパネルの入力検出
-- 画像表示テスト
-- GUIインターフェース
+- LovyanGFXライブラリによる高速グラフィックス
+- SPRESENSEのSPI4ポート使用
+- 基本的なテキスト・図形描画
+
+詳細は [display_test/README.md](display_test/README.md) を参照してください。
 
 ### 3. schlieren_camera（準備中）
 
@@ -114,6 +116,9 @@ ILI9341ドライバを使用したSPI制御TFT液晶のテストプロジェク�
    ```
 
 3. 各プロジェクトのビルド
+
+   **重要**: このリポジトリには複数の独立したPlatformIOプロジェクトが含まれています。VS Codeでは、**各プロジェクトフォルダ（camera_test、display_testなど）を個別に開いてください**。リポジトリのルートフォルダではなく、作業したいプロジェクトフォルダを直接開く必要があります。
+
    ```bash
    # camera_testをビルド
    cd camera_test
@@ -121,6 +126,15 @@ ILI9341ドライバを使用したSPI制御TFT液晶のテストプロジェク�
    
    # SPRESENSEに書き込み
    pio run --target upload
+   ```
+
+   VS Codeで開く場合：
+   ```bash
+   # camera_testプロジェクトを開く
+   code camera_test
+   
+   # または display_testプロジェクトを開く
+   code display_test
    ```
 
 ## 開発ロードマップ
