@@ -158,7 +158,7 @@ ILI9341ドライバを使用したSPI制御TFT液晶のテストプロジェク�
 各プロジェクトの詳細な使用方法は、それぞれのREADME.mdを参照してください：
 
 - [camera_test/README.md](camera_test/README.md) - カメラテストの使用方法
-- display_test/README.md - ディスプレイテストの使用方法（準備中）
+- [display_test/README.md](display_test/README.md) - ディスプレイテストの使用方法
 - schlieren_camera/README.md - シュリーレンカメラの使用方法（準備中）
 
 ## ハードウェア接続
@@ -209,4 +209,4 @@ TBD
 ---
 
 **更新日**: 2025/12/01  
-**プロジェクト状況**: camera_test 完成 / display_test 準備中 / schlieren_camera 準備中
+**プロジェクト状況**: camera_test 完成 / display_test 基本実装完了 / schlieren_camera 準備中
