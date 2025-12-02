@@ -16,7 +16,7 @@ public:
       auto cfg = _bus_instance.config();
 
       cfg.spi_mode   = 0;          // ILI9341 は MODE0
-      cfg.freq_write = 40000000;   // 40MHz (ダメなら 20000000 に下げる)
+      cfg.freq_write = 20000000;   // 40MHz (ダメなら 20000000 に下げる)
       cfg.freq_read  = 16000000;
       cfg.pin_dc     = 9;          // D9 = DC
       cfg.spi_port   = 4;          // ★ここが超重要：4
