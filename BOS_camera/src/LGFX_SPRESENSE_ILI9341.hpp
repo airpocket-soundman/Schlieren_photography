@@ -1,4 +1,3 @@
-
 #pragma once
 
 #define LGFX_USE_V1
@@ -16,13 +15,10 @@ public:
       auto cfg = _bus_instance.config();
 
       cfg.spi_mode   = 0;          // ILI9341 は MODE0
-      cfg.freq_write = 20000000;   // 40MHz (ダメなら 20000000 に下げる)
+      cfg.freq_write = 40000000;   // 40MHz
       cfg.freq_read  = 16000000;
       cfg.pin_dc     = 9;          // D9 = DC
-      cfg.spi_port   = 4;          // ★ここが超重要：4
-
-      // D11/D12/D13 は Spresense 側で SPI4 に割り当て済みなので
-      // pin_sclk / pin_mosi / pin_miso は省略可（お任せでOK）
+      cfg.spi_port   = 4;          // SPI4
 
       _bus_instance.config(cfg);
       _panel_instance.setBus(&_bus_instance);
@@ -44,7 +40,7 @@ public:
       cfg.invert          = false;
       cfg.rgb_order       = false;
       cfg.dlen_16bit      = false;
-      cfg.bus_shared      = true;  // SD と共有するなら true
+      cfg.bus_shared      = true;  // SDカードと共有する場合
 
       _panel_instance.config(cfg);
     }
